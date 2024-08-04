@@ -1,0 +1,88 @@
+<!Doctype html>
+<html lang="" en>
+
+<head>
+  <title> Sign UP</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+  <h1>Health<span>Care</span><img src="./assets/care.svg"></h1>
+  <div Class="signup">
+
+    <h2>CREATE ACCOUNT</h2>
+    <form>
+      <label><strong>*</strong> USER NAME</label>
+      <input type="text" required placeholder="User Name" id="username">
+      <label><strong>*</strong> EMAIL ADDRESS</label>
+      <input type="email" required placeholder="Email Address" id="email">
+      <label><strong>*</strong> PASSWORD</label>
+      <input type="password" required placeholder="Password" id="password">
+      <label><strong>*</strong> VERIFY PASSWORD</label>
+      <input type="password" required placeholder="Verify Password" id="pass2">
+      <button class="register" type="submit" onclick="return signUp()"> REGISTER</button>
+      <div class="or">
+        <span>
+        </span>
+        <p>OR</p>
+        <span>
+
+        </span>
+      </div>
+      <button class="button2" type="submit" onclick="return signIN()">LOGIN</button>
+    </form>
+
+  </div>
+  <script>
+   function signUp() {
+  // Get form inputs
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var password2 = document.getElementById('pass2').value;
+  var mail = document.getElementById('email').value;
+
+  // Simple validation
+  if (username === '' || password === '' || mail === '' || password2 === '') {
+    alert('Please fill in all fields.');
+    return false;
+  }
+  if(password.length < 8) {  
+        alert('Password length must be atleast 8 characters.');  
+       return false;
+  }
+
+  var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+  if (!mail.match(mailformat)) {
+    alert("You have entered an invalid email address!");
+    return false;
+  }
+
+  if (password != password2) {
+    alert('The Password is not match.');
+    return false;
+  }
+  // Validate email format using regular expression
+  setTimeout(function () {
+    alert('Sign up successful!');
+    window.location.href = 'signin.html'; // Replace 'login.html' with your actual login page URL
+  }, 1000);
+
+  return false; // Prevent form submission
+}
+function signIN() {
+
+setTimeout(function () {
+
+  window.location.href = 'signin.html'; // Replace 'login.html' with your actual login page URL
+}, 1000);
+
+return false; // Prevent form submission
+}
+  </script>
+  
+    
+  
+</body>
+
+</html>

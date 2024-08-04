@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HealthCare</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style_index.css">
+</head>
+
+<body>
+    <header>
+        
+        <a href="index.html">
+            <h2>Health<strong>Care</strong><img src="./assets/care.svg" alt=""></h2>
+        </a>
+
+        <ul class="elemns">
+            <li class="tit"><a class="a" href="index.html">Home</a></li>
+            <li class="tit"><a class="a" href="about.html">About</a></li>
+            <li class="tit"><a class="a" href="contactus.html">Contact Us</a></li>
+            <li class="tit"><i class="far fa-user"></i><a class="a" href="login/signin.html">Login</a></li>
+        </ul>
+    </header><!-- end of header -->
+    <section class="backimage"></section>
+    <div class="container">
+        <section class="content">
+            <h4>Leukemia</h4>
+        </section>
+        <p>As a highly prevalent cancer, the definitive diagnosis of acute lymphoblastic leukemia (ALL)
+            requires <br> invasive, expensive, and time-consuming diagnostic tests.
+            ALL diagnosis using peripheral blood smear <br>(PBS) images plays a vital role in the initial cancer
+            screening from non-cancer cases.
+            The examination of <br>these PBS images by laboratory users is riddled
+            with problems such as diagnostic error because the non-<br>specific nature of ALL signs and symptoms
+            often leads to misdiagnosis.</p>
+            <div class="upload">
+                <!-- Input element for uploading photo -->
+                <input type="file" accept="image/*" id="photoInput" onchange="previewPhoto(event)">
+                <button onclick="document.getElementById('photoInput').click()">Upload Photo</button>
+                </div>
+                <!-- Image preview container -->
+                <div id="imagePreview"></div>
+                </div>
+    </div>
+    <script>
+        function previewPhoto(event) {
+            // Get the file selected by the user
+            var file = event.target.files[0];
+    
+            // Check if a file was selected
+            if (file) {
+                // Create a FileReader object
+                var reader = new FileReader();
+    
+                // Set up the FileReader onload event handler
+                reader.onload = function (e) {
+                    // Get the image preview element
+                    var imagePreview = document.getElementById('imagePreview');
+    
+                    // Create an img element
+                    var img = document.createElement('img');
+    
+                    // Set the src attribute of the img element to the data URL obtained from FileReader
+                    img.src = e.target.result;
+    
+                    // Append the img element to the image preview container
+                    imagePreview.innerHTML = '';
+                    imagePreview.appendChild(img);
+                };
+    
+                // Read the file as a data URL
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+
+</html>

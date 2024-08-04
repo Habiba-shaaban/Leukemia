@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #F5F7FA;
+    /* Add this line to reset the default margin */
+}
+
+
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    float: left;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    border-radius: 15px;
+}
+header img{
+    
+    margin-left: 10px;
+    color: #046791;
+}
+header h2 {
+    margin-left: 50px;
+    margin-right: 800px;
+    float: left;
+    margin-top: 10px;
+    color:black ;
+    font-size: 25px;
+}
+h2 i{
+    font-size: 15px;
+    margin-left: 10px;
+    color: blue;
+}
+strong{
+    color: blue;
+}
+
+.tit {
+    margin-right: 60px;
+    margin-top: 15px;
+    float: left;
+    /* margin-left: 120px; */
+    color: brown;
+
+
+}
+.a {
+    text-decoration: none;
+    color: #010F53;
+    position: relative;
+
+}
+
+.a:hover {
+    color: rgb(55, 0, 253);
+}
+
+
+.a::after {
+
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: all 1s;
+
+    background-color: #1e00ff;
+}
+
+.a:hover::after {
+
+    width: 100%;
+}
+
+.elemns {
+    display: inline;
+
+    list-style: none;
+}
+.elemns i{
+    margin-right: 8px;
+    color: blue;
+}
+.head{
+    
+    margin-top: 200px;
+    margin-left:180px;
+    color: #010F53;
+}
+.head h3{
+    font-size: 30px;
+    color: rgb(16, 16, 87);
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.footertext{
+    margin-top: 60px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 5px;
+}
+
+.footerform{
+    width: 280px;
+    height: 340px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+}
+.firstpart{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.firstpart p{
+    font-weight: bold;
+    color: #046791;
+
+}
+.firstpart div{
+    display: flex;
+    flex-direction: column;
+}
+.firstpart input{
+    width: 120px;
+    height: 30px;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+    border: none;
+    border-radius: 9px;
+    margin-top: 10px;
+}
+.firstpart strong{
+  color: red;
+}
+.email{
+    margin-top: 20px;
+    margin-left: 12px;
+    font-weight: bold;
+    color: #046791;
+}
+.email strong{
+    color: red;
+}
+.emailinp{
+    width: 260px;
+    height: 30px;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+    border: none;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-left:12px ;
+}
+.help p{
+    margin-top: 20px;
+    margin-left: 12px;
+    font-weight: bold;
+    color: #046791;
+}
+.help textarea{
+    width: 260px;
+    height: 50px;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+    border: none;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-left:12px ;
+}
+.submit button{
+    width: 100px;
+    height: 30px;
+    margin-left: 80px;
+    margin-top: 20px;
+    background-color: #046791;
+    color: white;
+    border-radius: 10px; 
+    font-size: 16px;
+    padding: 5px 0px;
+    transition: .2s;
+}
+.submit button:hover{
+   opacity: .6;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <form id="signupForm" onsubmit="return signUp()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <script>
+    function signUp() {
+      // Get form inputs
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simple validation
+      if (username === '' || password === '') {
+        alert('Please fill in all fields.');
+        return false;
+      }
+
+      // Simulate sign-up process (replace with your actual sign-up logic)
+      // For demonstration purposes, redirect to login page after 1 second
+      setTimeout(function() {
+        alert('Sign up successful!');
+        window.location.href = 'signin.html'; // Replace 'login.html' with your actual login page URL
+      }, 1000);
+
+      return false; // Prevent form submission
+    }
+  </script>
+</body>
+</html>
